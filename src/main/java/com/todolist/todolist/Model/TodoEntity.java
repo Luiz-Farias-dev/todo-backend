@@ -22,13 +22,15 @@ public class TodoEntity {
     private boolean isDone;
 
     // Construtores
-    public TodoEntity() {}
-
-    public TodoEntity(String titulo, String descricao, boolean isDone) {
-        this.titulo = titulo;
-        this.descricao = descricao;
-        this.isDone = isDone;
+    public TodoEntity() {
+        this.isDone = false;
     }
+
+//    public TodoEntity(String titulo, String descricao, boolean isDone) {
+//        this.titulo = titulo;
+//        this.descricao = descricao;
+//        this.isDone = isDone;
+//    }
 
     //Getters and Setters
     public Long getId() {
@@ -51,11 +53,11 @@ public class TodoEntity {
         this.descricao = descricao;
     }
 
-    public boolean isDone() {
+    public boolean getIsDone() {
         return isDone;
     }
 
-    public void setDone(boolean done) {
-        isDone = done;
+    public void setIsDone(boolean isDone) {
+        isDone = isDone;
     }
 }

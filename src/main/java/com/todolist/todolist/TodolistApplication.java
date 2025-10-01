@@ -8,6 +8,8 @@ public class TodolistApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TodolistApplication.class, args);
-	}
 
+        System.out.println("🎯 Backend pronto para receber requisições!");
+        System.out.println("📍 URL: http://localhost:8080");
+	}
 }
