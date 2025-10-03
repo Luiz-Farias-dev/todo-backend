@@ -15,4 +15,12 @@ public class TodoService {
         return todoListRepository.save(todoEntity);
     }
 
+    public boolean deleteTask(Long id) {
+        if (todoListRepository.existsById(id)) {
+            todoListRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
+
 }
