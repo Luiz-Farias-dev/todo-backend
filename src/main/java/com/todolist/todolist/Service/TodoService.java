@@ -5,6 +5,9 @@ import com.todolist.todolist.Repository.TodoListRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class TodoService {
 
@@ -23,4 +26,11 @@ public class TodoService {
         return false;
     }
 
+    public List<TodoEntity> getAllTasks() {
+        return todoListRepository.findAll();
+    }
+
+    public Optional<TodoEntity> getTaskById(Long id) {
+        return todoListRepository.findById(id);
+    }
 }
